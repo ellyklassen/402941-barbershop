@@ -9,9 +9,9 @@
   <header class="main-header">
     <nav class="main-navigation">
       <a class="main-navigation-logo">
-        <img src="img/logo.svg" alt="Логотип Барбершопа">
+        <img src="img/logo.svg" width="111" height="24" alt="Логотип Барбершопа">
       </a>
-       <ul>
+       <ul class="site-navigation">
          <li><a href="info.html">Информация</a></li>
          <li><a href="news.html">Новости</a></li>
          <li><a href="price.html">Прайс-лист</a></li>
@@ -19,16 +19,25 @@
          <li><a href="contacts.html">Контакты</a></li>
        </ul>
        <ul class="user-navigation">
-         <li class="login-link">Вход</li>
+         <li class="login-link">
+           <a class="login-link" href="login.html">Вход</a>
+         </li>
        </ul>
     </nav>
   </header>
   <main class="container">
    <h1 class="page-title">Набор для путешествий "BAXTER OF CALIFORNIA"</h1>
+
    <ul class="breadcrumbs">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="catalog.html">Магазин</a></li>
-      <li><a href="#">Средства для ухода</a></li>
+      <li>
+        <a href="index.html">Главная</a>
+      </li>
+      <li>
+        <a href="catalog.html">Магазин</a>
+      </li>
+      <li>
+        <a href="#">Средства для ухода</a>
+      </li>
       <li class="breadcrumbs-current">Набор для путешествий "BAXTER OF CALIFORNIA"</li>
     </ul>
   <section class="product-photos">
@@ -76,9 +85,9 @@
     <div class="footer-social"
      <b>Давайте дружить!</b>
      <ul>
-       <li class="social-button" href="#">Вконтакте</li>
-       <li class="social-button" href="#">Фейсбук</li>
-       <li class="social-button" href="#">Инстаргам</li>
+       <li class="social-button"><a href="#">Вконтакте</a></li>
+       <li class="social-button"><a href="#">Фейсбук</a></li>
+       <li class="social-button"><a href="#">Инстаргам</a></li>
      </ul>
     </div>
     <p class="footer-copyright">
@@ -86,5 +95,30 @@
       <a class="button" href="https/::htmlacademy.ru">HTML Academy</a>
     </p>
   </footer>
+
+  <section class="modal modal-info">
+    <h2>Личный кабинет</h2>
+    <p>Введите свой логин и пароль.</p>
+    <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+      <p>
+        <label class="visually-hidden" for="user-login">Логин</label>
+        <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин">
+      </p>
+      <p>
+        <label class="visually-hidden" for="user-password">Пароль</label>
+        <input class="login-icon-password" id="user-password" type="text" name="password" placeholder="Пароль">
+      </p>
+      <p class="login-password-info">
+        <label class="login-checkbox">
+          <input type="checkbox" name="remember" class="visually-hidden">
+           <span class="checkbox-indncator"></span>
+           Запомните меня
+        </label>
+        <a class="restore" href="#">Я забыл пароль!</a>
+      </p>
+      <button class="button" type="submit">Войти</button>
+    </form>
+    <button class="modal-close" type="button">Закрыть</button>
+  </section>
 </body>
 </html>
